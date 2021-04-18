@@ -7,7 +7,7 @@
 -- two dots ('..' - without quotes).
 
 CREATE TABLE "departments" (
-    "dept_no" int   NOT NULL,
+    "dept_no" varchar(5)   NOT NULL,
     "dept_name" varchar(20)   NOT NULL,
     CONSTRAINT "pk_departments" PRIMARY KEY (
         "dept_no"
@@ -15,13 +15,13 @@ CREATE TABLE "departments" (
 );
 
 CREATE TABLE "dept_manager" (
-    "dept_no" int   NOT NULL,
+    "dept_no" varchar(5)   NOT NULL,
     "emp_no" int   NOT NULL
 );
 
 CREATE TABLE "dept_emp" (
     "emp_no" int   NOT NULL,
-    "dept_no" int   NOT NULL
+    "dept_no" varchar(5)   NOT NULL
 );
 
 CREATE TABLE "employees" (
