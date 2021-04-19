@@ -1,6 +1,6 @@
 ---------------------------------------------------
 --
--- SQL-Challenge Dan C. Data Analysis 
+-- SQL-Challenge DanC Data Analysis
 --
 ---------------------------------------------------
 
@@ -66,4 +66,11 @@ select count(*), last_name
   having COUNT(*) > 0
   order by count(*) desc;
 
+-- Bonus
+
+select t.title, min(s.salary), max(s.salary)
+  from salaries s
+  inner join employees em on em.emp_no = s.emp_no
+  inner join titles t on t.title_id = em.emp_title_id
+  group by t.title_id;
 
