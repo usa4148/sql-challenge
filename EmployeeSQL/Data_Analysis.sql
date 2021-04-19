@@ -60,4 +60,10 @@ select e.emp_no, e.last_name, e.first_name, d.dept_name
 
 -- 8)
 
+select count(*), last_name
+  from employees
+  group by last_name
+  having COUNT(*) > 0
+  order by count(*) desc;
+
 
