@@ -1,6 +1,6 @@
 ---------------------------------------------------
 --
--- SQL-Challenge DanC Data Analysis
+-- SQL-Challenge Dan C. Data Analysis 
 --
 ---------------------------------------------------
 
