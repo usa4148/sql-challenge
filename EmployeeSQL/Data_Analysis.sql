@@ -68,7 +68,14 @@ select count(*), last_name
 
 -- Bonus
 
-select t.title, min(s.salary), max(s.salary), round(avg(s.salary))
+create table "salary_ranges" (
+  "title" varchar(20),
+  "min" int,
+  "max" int,
+  "avg" decimal);
+
+insert into salary_ranges
+  select t.title, min(s.salary), max(s.salary), round(avg(s.salary))
   from salaries s
   inner join employees em on em.emp_no = s.emp_no
   inner join titles t on t.title_id = em.emp_title_id
